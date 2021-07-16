@@ -1,4 +1,4 @@
-export default class student{
+class student{
     constructor(name, email, dept){
         this.name = name;
         this.email = email;
@@ -9,3 +9,5 @@ export default class student{
         return this.name;
     }
 }
+
+module.exports = student;

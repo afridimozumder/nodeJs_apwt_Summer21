@@ -50,8 +50,8 @@ p.then(msg=>{
     console.log(error);
 }); */
 
-//function returns promise
-/* function sum(a, b){
+/* //function returns promise
+function sum(a, b){
     return new Promise((resolve, reject)=>{
         if(a!==0 && b!==0){
 
@@ -64,19 +64,23 @@ p.then(msg=>{
             reject(0);
         }
     })
-} */
+}
+
+//asynchronous function
+ async function mytask (x, y){
+    let total = await sum(x, y);
+    console.log(`Total Value ${total}`);
+}
+
+mytask(10,20);
+console.log("this is a function!!");
+ */
 
 /* sum(1,9).then(msg=>{
     console.log(msg);
 }).catch(error=>{
     console.log(error);
-}); */
-
-//asynchronous function
-/* async function mytask (x, y){
-    let total = await sum(x, y);
-    return total;
-}
+});
 
 mytask(1,9).then(msg=>{
     console.log(msg);
@@ -85,10 +89,12 @@ mytask(1,9).then(msg=>{
 }); */
 
 
-import {Student} from './Student';
+//import {Student} from './student';
+//import Student from './student'; // this is used inside module
 
+const Student = require('./student.js');
 
-const s1 = new student('afridi', 'abc@gmail.com', 'cse');
+const s1 = new Student('afridi', 'abc@gmail.com', 'cse');
 console.log(s1.getName());
 
 
